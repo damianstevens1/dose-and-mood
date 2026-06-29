@@ -82,25 +82,25 @@ function differsFromSample(log: DailyLog, sample?: DailyLog) {
 }
 
 function getSearchParams() {
-  if (typeof window === "undefined") {
-    return new URLSearchParams();
+  if (Platform.OS !== "web" || typeof window === "undefined" || !window.location?.search) {
+    return null;
   }
 
   return new URLSearchParams(window.location.search);
 }
 
 function getIsExampleDemo() {
-  const demo = getSearchParams().get("demo");
+  const demo = getSearchParams()?.get("demo");
   return demo === "summer" || demo === "30day" || demo === "example";
 }
 
 function getIsFreshLogger() {
   const params = getSearchParams();
-  return params.get("mode") === "logger" || params.get("start") === "logger";
+  return params?.get("mode") === "logger" || params?.get("start") === "logger";
 }
 
 function clearModeParam() {
-  if (typeof window === "undefined") {
+  if (Platform.OS !== "web" || typeof window === "undefined" || !window.location || !window.history?.replaceState) {
     return;
   }
 
