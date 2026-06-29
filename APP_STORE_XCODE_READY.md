@@ -16,7 +16,7 @@ Before submission, confirm the bundle identifier matches the Apple Developer acc
 
 ## Xcode Path On A Mac
 
-Run from `outputs/dose-and-mood`:
+Run from the cloned repo root:
 
 ```bash
 npm install
