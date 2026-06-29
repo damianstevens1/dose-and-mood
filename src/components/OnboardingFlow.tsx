@@ -14,7 +14,7 @@ type Props = {
   onComplete: (profile: UserProfile) => void;
 };
 
-const ageOptions = ["30-39", "40-49", "50-60", "60+"];
+const ageOptions = ["18-29", "30-39", "40-49", "50-60", "60+"];
 const genderOptions = ["Woman", "Man", "Nonbinary", "Prefer not"];
 const medicationOptions = ["Ozempic", "Wegovy", "Mounjaro", "Zepbound", "Other"];
 const doseDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
