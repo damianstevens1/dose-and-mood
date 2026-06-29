@@ -1,0 +1,34 @@
+{
+  "name": "dose-and-mood",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start --host 0.0.0.0",
+    "web": "expo start --web --host 0.0.0.0",
+    "ios": "expo start --ios",
+    "android": "expo start --android",
+    "prebuild:ios": "expo prebuild --platform ios",
+    "prebuild:ios:clean": "expo prebuild --platform ios --clean",
+    "eas:ios": "eas build --platform ios --profile production",
+    "typecheck": "node --stack_size=8192 ./node_modules/typescript/bin/tsc --noEmit"
+  },
+  "dependencies": {
+    "@expo/metro-runtime": "~56.0.15",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "expo": "~56.0.12",
+    "expo-haptics": "~56.0.3",
+    "expo-linear-gradient": "~56.0.4",
+    "expo-status-bar": "~56.0.4",
+    "lucide-react-native": "^1.22.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.85.3",
+    "react-native-svg": "15.15.4",
+    "react-native-web": "^0.21.2"
+  },
+  "devDependencies": {
+    "@types/react": "~19.2.2",
+    "typescript": "~6.0.3"
+  }
+}
